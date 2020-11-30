@@ -95,7 +95,10 @@ function MyPets() {
 			active: 0,
 		};
 		Axios.post(
-			"https://alarmist-donkey-0357.dataplicity.io/api/v1/addpet/" + usr + key,
+			"https://alarmist-donkey-0357.dataplicity.io/api/v1/addpet/" +
+				usr +
+				"/" +
+				key,
 			data
 		)
 			.then((res) => {
@@ -143,7 +146,10 @@ function MyPets() {
 		}
 		const fetchData = async () => {
 			const result = await Axios(
-				"https://alarmist-donkey-0357.dataplicity.io/api/v1/list/" + usr + key
+				"https://alarmist-donkey-0357.dataplicity.io/api/v1/list/" +
+					usr +
+					"/" +
+					key
 			);
 			if (didIt === false) {
 				for (let i = 0; i < result.data.length; i++) {

@@ -35,6 +35,7 @@ function Home() {
 			const result = await axios(
 				"https://alarmist-donkey-0357.dataplicity.io/api/v1/activate/" +
 					usr +
+					"/" +
 					key
 			);
 		};

@@ -19,15 +19,21 @@ const Navbar = (props) => {
 	useEffect(() => {
 		const fetchData = async () => {
 			const resultRed = await axios(
-				"https://alarmist-donkey-0357.dataplicity.io/api/v1/red/" + usr + key
+				"http://alarmist-donkey-0357.dataplicity.io/api/v1/red/" +
+					usr +
+					"/" +
+					key
 			);
 			setRed(resultRed.data.red);
 			const resultBlue = await axios(
-				"https://alarmist-donkey-0357.dataplicity.io/api/v1/blue/" + usr + key
+				"http://alarmist-donkey-0357.dataplicity.io/api/v1/blue/" +
+					usr +
+					"/" +
+					key
 			);
 			setBlue(resultBlue.data.blue);
 			const resultTemp = await axios(
-				"https://alarmist-donkey-0357.dataplicity.io/api/v1/temp/" + key
+				"http://alarmist-donkey-0357.dataplicity.io/api/v1/temp/" + key
 			);
 			setTemp(resultTemp.data.temp.toFixed(2) + " ℃");
 		};

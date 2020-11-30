@@ -25,6 +25,7 @@ const DailyReportCard = (props) => {
 		Axios.post(
 			"https://alarmist-donkey-0357.dataplicity.io/api/v1/reportPet/" +
 				usr +
+				"/" +
 				key,
 			data
 		)

@@ -22,7 +22,10 @@ function DailyReport() {
 		}
 		const fetchData = async () => {
 			const result = await Axios(
-				"https://alarmist-donkey-0357.dataplicity.io/api/v1/list/" + usr + key
+				"https://alarmist-donkey-0357.dataplicity.io/api/v1/list/" +
+					usr +
+					"/" +
+					key
 			);
 			for (let i = 0; i < result.data.length; i++) {
 				setNameArray((prev) => [...prev, result.data[i].name]);
