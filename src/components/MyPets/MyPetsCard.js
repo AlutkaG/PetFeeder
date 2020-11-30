@@ -71,7 +71,10 @@ const PetCard = (props) => {
 
 			setIndexNow(index);
 			Axios.post(
-				"http://catfeeder.ddns.net/api/v1/enabled/" + usr + "/" + key,
+				"https://alarmist-donkey-0357.dataplicity.io/api/v1/enabled/" +
+					usr +
+					"/" +
+					key,
 				data
 			)
 				.then((res) => {
@@ -89,7 +92,10 @@ const PetCard = (props) => {
 
 			setIndexNow(-1);
 			Axios.post(
-				"http://catfeeder.ddns.net/api/v1/disabled/" + usr + "/" + key,
+				"https://alarmist-donkey-0357.dataplicity.io/api/v1/disabled/" +
+					usr +
+					"/" +
+					key,
 				data
 			)
 				.then((res) => {
@@ -109,7 +115,10 @@ const PetCard = (props) => {
 			name: name,
 		};
 		Axios.post(
-			"http://catfeeder.ddns.net/api/v1/delete/" + usr + "/" + key,
+			"https://alarmist-donkey-0357.dataplicity.io/api/v1/delete/" +
+				usr +
+				"/" +
+				key,
 			data
 		)
 			.then((res) => {
