@@ -348,7 +348,7 @@ function MyPets() {
 												<Field
 													className='input'
 													type='text'
-													placeholder='Portion (1 portion -> 1 rotation of the servo)...'
+													placeholder='Portion (max 6)...'
 													name='portion'
 												/>
 												<div
@@ -367,7 +367,7 @@ function MyPets() {
 												<Field
 													className='input'
 													type='text'
-													placeholder='Hour (1-24)...'
+													placeholder='Hour (0-24)...'
 													name='hours'
 												/>
 												<div
@@ -386,7 +386,7 @@ function MyPets() {
 												<Field
 													className='input'
 													type='text'
-													placeholder='Minutes (1-59)...'
+													placeholder='Minutes (0-59)...'
 													name='minutes'
 												/>
 												<div
