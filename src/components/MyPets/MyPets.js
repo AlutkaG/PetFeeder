@@ -106,6 +106,7 @@ function MyPets() {
 				if (res.data.msg == "Pet exist") {
 					setError("Pet is already added");
 				} else {
+					setError("");
 					setName(event.name);
 					setType(event.type);
 					setPortion(event.portion);
@@ -114,30 +115,29 @@ function MyPets() {
 					setIsAdded(1);
 					setId(id + 1);
 					setIsLoading(false);
+					nameArray.push(event.name);
+					typeArray.push(event.type);
+					portionArray.push(event.portion);
+					hoursArray.push(event.hours);
+					minutesArray.push(event.minutes);
+					isActiveArray.push(0);
+
+					let info = {
+						hours: event.hours,
+						id: id + 1,
+						minutes: event.minutes,
+						name: event.name,
+						portion: event.portion,
+						type: event.type,
+						active: 0,
+					};
+					infoArray.push(info);
+					setId(info.id);
 				}
 			})
 			.catch((error) => {
 				console.log(error.response);
 			});
-		nameArray.push(event.name);
-		typeArray.push(event.type);
-		portionArray.push(event.portion);
-		hoursArray.push(event.hours);
-		minutesArray.push(event.minutes);
-		isActiveArray.push(0);
-
-		let info = {
-			hours: event.hours,
-			id: id + 1,
-			minutes: event.minutes,
-			name: event.name,
-			portion: event.portion,
-			type: event.type,
-			active: 0,
-		};
-		infoArray.push(info);
-		setId(info.id);
-		console.log("info id: " + info.id);
 	};
 
 	useEffect(() => {
@@ -520,7 +520,7 @@ function MyPets() {
 										<Field
 											className='input'
 											type='text'
-											placeholder='Hour (1-24)...'
+											placeholder='Hour (0-23)...'
 											name='hours'
 										/>
 										<div
@@ -537,7 +537,7 @@ function MyPets() {
 										<Field
 											className='input'
 											type='text'
-											placeholder='Minutes (1-59)...'
+											placeholder='Minutes (0-59)...'
 											name='minutes'
 										/>
 										<div

@@ -135,7 +135,9 @@ const PetCard = (props) => {
 			<div className='petCardBig'>
 				<div className='petCard' key={index}>
 					<div className='row'>
-						<div className='columnLeftCard namePet'>{pet.name}</div>
+						<div className='columnLeftCard namePet'>
+							{pet.name} {pet.id}
+						</div>
 						<div className='columnRightCard'>
 							<button
 								className='cardButton'
