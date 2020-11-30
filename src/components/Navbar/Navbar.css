@@ -1,0 +1,109 @@
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.topNav {
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	padding-top: 0px;
+	overflow-y: hidden;
+	background-color: #262626;
+	border-color: rgb(77, 77, 77);
+	border-style: none none solid none;
+	border-width: 1px;
+}
+
+.topNavNavi {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.topNavLinksRight {
+	text-align: le;
+	float: left;
+	padding-top: 8px;
+}
+
+.topNavLinksRight a {
+	text-decoration: none;
+	color: #fffbfc;
+	display: inline-block;
+	font-size: 30px;
+	padding-right: 40px;
+}
+
+.topNavLinksRight a:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.appName {
+	text-align: left;
+	font-size: 50px;
+	padding-left: 20px;
+	font-weight: 500;
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+.spacer {
+	flex: 1;
+}
+
+.icon-menu {
+	background-color: #262626;
+	outline: none;
+	border-style: none;
+	border-width: 0px;
+	border-color: #262626;
+	cursor: pointer;
+}
+
+.sensorsSmall {
+	padding-left: 20px;
+}
+
+.sensorsBig {
+	padding-left: 20px;
+}
+
+@media only screen and (min-width: 1181px) {
+	.icon-menu {
+		display: none;
+	}
+	.topNavLinksRightSensorsSmall {
+		display: none;
+	}
+	.sensorsSmall {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1180px) and (min-width: 500px) {
+	.topNavLinksRight {
+		display: none;
+	}
+	.appName {
+		font-size: 40px;
+	}
+	.sensorsSmall {
+		display: none;
+	}
+}
+
+@media (max-width: 499px) {
+	.appName {
+		font-size: 30px;
+	}
+	.topNavLinksRight {
+		display: none;
+	}
+	.sensorsBig {
+		display: none;
+	}
+}

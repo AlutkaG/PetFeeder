@@ -1,0 +1,22 @@
+import React, { useState, useEffect } from 'react';
+
+import './App.css';
+
+function App() {
+  const [currentTime, setCurrentTime] = useState('');
+  useEffect(() => {
+    fetch('/time').then(res => res.json()).then(data =>{
+      setCurrentTime(data.b5);
+    });
+  }, []);
+
+
+    return (
+      <div className="App">
+        <p> The current time is {currentTime}.</p> 
+      </div>
+    );
+  }
+
+
+export default App;

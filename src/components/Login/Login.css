@@ -1,0 +1,94 @@
+.loginBox {
+	width: 600px;
+	height: 500px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 5px;
+	margin-left: 35%;
+	margin-top: 5%;
+	font-size: 25px;
+	text-align: center;
+	color: #333333;
+	box-shadow: 11px 10px 32px -4px rgba(0, 0, 0, 0.75);
+	border-style: solid;
+	border-width: 2px;
+}
+
+.loginBody {
+	width: 100vw;
+	height: 100vh;
+	background-size: 100vw 100vh;
+	background-repeat: no-repeat;
+	background-image: url("../../img/login2.jpg");
+}
+
+.columnLeftLogin {
+	float: left;
+	width: 44%;
+	text-align: right;
+	padding-right: 1%;
+}
+.columnRightLogin {
+	float: right;
+	width: 54%;
+	text-align: left;
+	padding-left: 1%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.buttonSignIn {
+	width: 200px;
+	height: 50px;
+	color: whitesmoke;
+	font-size: 20px;
+	outline: none;
+	border-style: none;
+	background-color: #333333;
+}
+
+.errorLogin {
+	font-size: 10px;
+	color: red;
+}
+
+.appNameLogin {
+	text-align: center;
+	color: #333333;
+	font-size: 100px;
+	padding-top: 2%;
+}
+
+.pswdMarginTop {
+	margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+	.loginBox {
+		width: 300px;
+		height: 470px;
+		margin-left: 8%;
+		font-size: 20px;
+	}
+
+	.loginBig {
+		display: none;
+	}
+	.appNameLogin {
+		font-size: 50px;
+		padding-top: 8%;
+		color: black;
+	}
+	.pswdMarginTop {
+		margin-top: 0;
+	}
+}
+
+@media (min-width: 501px) {
+	.loginSmall {
+		display: none;
+	}
+}
