@@ -11,6 +11,7 @@
 	box-shadow: 11px 10px 32px -4px rgba(0, 0, 0, 0.75);
 	border-style: solid;
 	border-width: 2px;
+	border-color: #333333;
 }
 
 .loginBody {
@@ -71,9 +72,9 @@
 	margin-bottom: 7%;
 	padding-bottom: 2%;
 	padding-top: 5%;
-	border-style: none none solid none;
+	border-style: solid;
 	border-width: 1px;
-	border-color: black;
+	border-color: #333333;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.8);
 }
