@@ -73,6 +73,7 @@
 	padding-top: 5%;
 	border-style: none none solid none;
 	border-width: 1px;
+	border-color: black;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.8);
 }
