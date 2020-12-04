@@ -70,7 +70,7 @@ function ForgotPassword() {
 	return (
 		<div className='loginBody'>
 			<div className='appNameLogin'>Pet Feeder</div>
-			<div className='registerBox'>
+			<div className='FPBox'>
 				<div className='changePswdName'>Change Password</div>
 				<Formik
 					initialValues={{
@@ -88,25 +88,50 @@ function ForgotPassword() {
 						<Form>
 							<div className='row'>
 								<div className='columnLeftLogin'>
-									<div>Name:</div>
+									<div
+										style={
+											window.matchMedia("(max-width:500px)").matches
+												? { paddingTop: "5px" }
+												: { paddingTop: "2px" }
+										}
+									>
+										Name:
+									</div>
 									<br />
-									<div>What's the name of your favorite pet?</div>
+									<div
+										style={
+											window.matchMedia("(max-width:500px)").matches
+												? { paddingTop: "5px" }
+												: { paddingTop: "2px" }
+										}
+									>
+										What's the name of your favorite pet?
+									</div>
 									<br />
-									<div>Password:</div>
+									<div
+										style={
+											window.matchMedia("(max-width:500px)").matches
+												? { paddingTop: "5px" }
+												: { paddingTop: "2px" }
+										}
+									>
+										Password:
+									</div>
 									<br />
-									<div>Password confirm:</div>
+									<div
+										style={
+											window.matchMedia("(max-width:500px)").matches
+												? { paddingTop: "5px" }
+												: { paddingTop: "2px" }
+										}
+									>
+										Password confirm:
+									</div>
 								</div>
 								<div className='columnRightLogin'>
 									<div
 										className={
-											window.matchMedia("(max-width:500px)")
-												? "errorFPSmall"
-												: "errorLogin"
-										}
-										style={
-											errors.name && touched.name
-												? { paddingBottom: "6%" }
-												: { paddingBottom: "20px" }
+											errors.name && touched.name ? "errorFPIs1" : "errorFPNot1"
 										}
 									>
 										<Field type='text' name='name' className='fieldRegLog' />
@@ -115,14 +140,9 @@ function ForgotPassword() {
 									</div>
 									<div
 										className={
-											window.matchMedia("(max-width:500px)")
-												? "errorFPSmall2"
-												: "errorLogin"
-										}
-										style={
 											errors.question && touched.question
-												? { paddingBottom: "12%" }
-												: { paddingBottom: "20px" }
+												? "errorFPIs2"
+												: "errorFPNot2"
 										}
 									>
 										<Field
@@ -137,14 +157,9 @@ function ForgotPassword() {
 									</div>
 									<div
 										className={
-											window.matchMedia("(max-width:500px)")
-												? "errorFPSmall"
-												: "errorLogin"
-										}
-										style={
 											errors.password && touched.password
-												? { paddingBottom: "6%" }
-												: { paddingBottom: "5px" }
+												? "errorFPIs3"
+												: "errorFPNot3"
 										}
 									>
 										<Field
@@ -159,14 +174,9 @@ function ForgotPassword() {
 									</div>
 									<div
 										className={
-											window.matchMedia("(max-width:500px)")
-												? "errorFPSmall3"
-												: "errorLogin"
-										}
-										style={
 											errors.passwordConfirm && touched.passwordConfirm
-												? { paddingBottom: "10%" }
-												: { paddingBottom: "15%" }
+												? "errorFPIs4"
+												: "errorFPNot4"
 										}
 									>
 										<Field
@@ -181,7 +191,7 @@ function ForgotPassword() {
 									</div>
 								</div>
 							</div>
-							<div className='row loginBig'>
+							<div className='row '>
 								<div
 									style={{
 										width: "50%",
@@ -205,25 +215,23 @@ function ForgotPassword() {
 									}}
 								>
 									<Link
-										to='/login'
-										onMouseEnter={() => setColor("black")}
-										onMouseLeave={() => setColor("#333333")}
-										style={{
-											fontSize: "18px",
-											textDecoration: "none",
-											color: color,
-										}}
-									>
-										Don you want to log in?
-									</Link>
-									<br />
-									<Link
 										to='/register'
 										onMouseEnter={() => setColor("black")}
 										onMouseLeave={() => setColor("#333333")}
+										className='loginLink'
 										style={{
-											fontSize: "18px",
-											textDecoration: "none",
+											color: color,
+										}}
+									>
+										Do you want to log in?
+									</Link>
+									<br />
+									<Link
+										to='/forgotPassword'
+										onMouseEnter={() => setColor("black")}
+										onMouseLeave={() => setColor("#333333")}
+										className='loginLink'
+										style={{
 											color: color,
 										}}
 									>
@@ -231,40 +239,7 @@ function ForgotPassword() {
 									</Link>
 								</div>
 							</div>
-							<div className='loginSmall'>
-								<input
-									className='buttonSignIn'
-									type='submit'
-									value='Submit'
-									style={{ marginBottom: "10px" }}
-								/>
-								<br />
-								<Link
-									to='/login'
-									onMouseEnter={() => setColor("black")}
-									onMouseLeave={() => setColor("#333333")}
-									style={{
-										fontSize: "18px",
-										textDecoration: "none",
-										color: color,
-									}}
-								>
-									Don you want to log in?
-								</Link>
-								<br />
-								<Link
-									to='/register'
-									onMouseEnter={() => setColor("black")}
-									onMouseLeave={() => setColor("#333333")}
-									style={{
-										fontSize: "18px",
-										textDecoration: "none",
-										color: color,
-									}}
-								>
-									Do you want to register?
-								</Link>
-							</div>
+
 							<div style={{ color: "red", marginTop: "4%", fontSize: "20px" }}>
 								{error}
 							</div>
