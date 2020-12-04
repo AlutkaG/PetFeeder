@@ -140,29 +140,26 @@
 		display: none;
 	}
 	.textBox2 {
-		width: 80vw;
-		height: 100px;
-		background-color: #333333;
-		border-color: #333333;
-		border-radius: 5px;
-		box-shadow: 8px 8px 57px 12px rgba(0, 0, 0, 0.75);
+		width: 250px;
+		height: 250px;
 		margin-right: auto;
 		margin-left: auto;
 		margin-top: 80px;
 	}
 
 	.text2 {
-		padding-top: 10px;
+		padding-top: 80px;
 		font-size: 23px;
 		margin-top: 0;
 	}
 
 	.pressButton {
-		width: 200px;
-		height: 200px;
+		width: 250px;
+		height: 250px;
 		background-size: 95%;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 5px;
 	}
 }
 
