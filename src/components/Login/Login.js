@@ -186,10 +186,8 @@ function Login() {
 
 							{user == undefined ? null : (
 								<div className='scheduleInfo'>
-									The active schedule is on the account: <br />
-									{user} <br />
-									The active schedule is for the pet:
-									<br /> {pet}
+									The active schedule is on the account: {user} <br />
+									The active schedule is for the pet: {pet}
 								</div>
 							)}
 							<div style={{ color: "red", marginTop: "4%", fontSize: "20px" }}>
