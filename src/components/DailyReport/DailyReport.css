@@ -65,11 +65,14 @@ p {
 @media (max-width: 500px) {
 	.reportCard {
 		width: 300px;
-		margin: 0;
-		margin-top: 70px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
 	}
 	.listPets {
-		margin-left: 8%;
+		width: 80vw;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.popupReport-inner {
 		width: 300px;
