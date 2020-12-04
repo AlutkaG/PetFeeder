@@ -132,7 +132,7 @@
 	width: 80%;
 }
 
-@media (max-width: 383px) {
+@media (max-width: 500px) {
 	.home-big {
 		display: none;
 	}
@@ -166,7 +166,7 @@
 	}
 }
 
-@media (max-width: 928px) and (min-width: 384px) {
+@media (max-width: 928px) and (min-width: 501px) {
 	.home-big {
 		display: none;
 	}
