@@ -69,20 +69,7 @@ const Register = () => {
 		<div className='loginBody'>
 			<div className='appNameLogin'>Pet Feeder</div>
 			<div className='registerBox'>
-				<div
-					style={{
-						fontSize: "50px",
-						marginBottom: "7%",
-						paddingBottom: "2%",
-						paddingTop: "5%",
-						borderStyle: "none none solid none",
-						borderWidth: "1px",
-						color: "white",
-						backgroundColor: "rgba(0,0,0,0.8)",
-					}}
-				>
-					Registration
-				</div>
+				<div className='loginTitle'>Registration</div>
 				<Formik
 					initialValues={{
 						name: "",
@@ -99,25 +86,52 @@ const Register = () => {
 						<Form>
 							<div className='row'>
 								<div className='columnLeftLogin'>
-									<div>Name:</div>
+									<div
+										style={
+											window.matchMedia("(max-width:500px)").matches
+												? { paddingTop: "5px" }
+												: { paddingTop: "2px" }
+										}
+									>
+										Name:
+									</div>
 									<br />
-									<div>Password:</div>
+									<div
+										style={
+											window.matchMedia("(max-width:500px)").matches
+												? { paddingTop: "5px" }
+												: { paddingTop: "2px" }
+										}
+									>
+										Password:
+									</div>
 									<br />
-									<div>Password confirm:</div>
+									<div
+										style={
+											window.matchMedia("(max-width:500px)").matches
+												? { paddingTop: "5px" }
+												: { paddingTop: "2px" }
+										}
+									>
+										Password confirm:
+									</div>
 									<br />
-									<div>What's the name of your favorite pet?</div>
+									<div
+										style={
+											window.matchMedia("(max-width:500px)").matches
+												? { paddingTop: "5px" }
+												: { paddingTop: "2px" }
+										}
+									>
+										What's the name of your favorite pet?
+									</div>
 								</div>
 								<div className='columnRightLogin'>
 									<div
 										className={
-											window.matchMedia("(max-width:500px)")
-												? "errorRegisterSmall"
-												: "errorLogin"
-										}
-										style={
 											errors.name && touched.name
-												? { paddingBottom: "6%" }
-												: { paddingBottom: "30px" }
+												? "errorRegisterIs1"
+												: "errorRegisterNot1"
 										}
 									>
 										<Field type='text' name='name' className='fieldRegLog' />
@@ -126,14 +140,9 @@ const Register = () => {
 									</div>
 									<div
 										className={
-											window.matchMedia("(max-width:500px)")
-												? "errorRegisterSmall2"
-												: "errorLogin"
-										}
-										style={
 											errors.password && touched.password
-												? { paddingBottom: "6%" }
-												: { paddingBottom: "10px" }
+												? "errorRegisterIs2"
+												: "errorRegisterNot2"
 										}
 									>
 										<Field
@@ -148,14 +157,9 @@ const Register = () => {
 									</div>
 									<div
 										className={
-											window.matchMedia("(max-width:500px)")
-												? "errorRegisterSmall3"
-												: "errorLogin"
-										}
-										style={
 											errors.passwordConfirm && touched.passwordConfirm
-												? { paddingBottom: "10%" }
-												: { paddingBottom: "25px" }
+												? "errorRegisterIs3"
+												: "errorRegisterNot3"
 										}
 									>
 										<Field
@@ -170,14 +174,9 @@ const Register = () => {
 									</div>
 									<div
 										className={
-											window.matchMedia("(max-width:500px)")
-												? "errorRegisterSmall"
-												: "errorLogin"
-										}
-										style={
 											errors.question && touched.question
-												? { paddingBottom: "12%" }
-												: { paddingBottom: "15%" }
+												? "errorRegisterIs4"
+												: "errorRegisterNot4"
 										}
 									>
 										<Field
