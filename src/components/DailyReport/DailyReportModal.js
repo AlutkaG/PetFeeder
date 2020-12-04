@@ -15,7 +15,7 @@ const DailyReportModal = (props) => {
 	const listReport = info.map((report, index) => (
 		<div key={index}>
 			<div className='row'>
-				<div style={{ width: "40%", float: "left" }}>
+				<div style={{ width: "40%", float: "left", color: "#b3ecff" }}>
 					<p>{report.date}</p>
 				</div>{" "}
 				<div style={{ width: "60%", float: "right", textAlign: "left" }}>
