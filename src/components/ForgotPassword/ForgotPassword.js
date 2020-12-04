@@ -215,7 +215,7 @@ function ForgotPassword() {
 									}}
 								>
 									<Link
-										to='/register'
+										to='/login'
 										onMouseEnter={() => setColor("black")}
 										onMouseLeave={() => setColor("#333333")}
 										className='loginLink'
@@ -227,7 +227,7 @@ function ForgotPassword() {
 									</Link>
 									<br />
 									<Link
-										to='/forgotPassword'
+										to='/register'
 										onMouseEnter={() => setColor("black")}
 										onMouseLeave={() => setColor("#333333")}
 										className='loginLink'

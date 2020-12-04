@@ -44,7 +44,6 @@ function Login() {
 			data
 		)
 			.then((res) => {
-				console.log(res);
 				if (res.data.msg == "Logged successful") {
 					Cookies.set("user", event.name);
 					setIsLogged(true);
@@ -56,7 +55,9 @@ function Login() {
 				}
 			})
 			.catch((error) => {
-				console.log(error.response);
+				if ((error = "Error: Network Error")) {
+					setError("Network Error");
+				}
 			});
 	};
 
@@ -69,12 +70,10 @@ function Login() {
 				"https://alarmist-donkey-0357.dataplicity.io/api/v1/displayActivePet/" +
 					key
 			);
-			if (result.data.pet == "undefined") {
-				setIsActive(1);
-			} else {
-				setPet(result.data.pet);
-				setUser(result.data.user);
-			}
+
+			setPet(result.data.pet);
+			setUser(result.data.user);
+
 			console.log(result.data.pet);
 		};
 		fetchData();
@@ -185,7 +184,7 @@ function Login() {
 								</div>
 							</div>
 
-							{user == "undefined" ? null : (
+							{user == undefined ? null : (
 								<div className='scheduleInfo'>
 									The active schedule is on the account: <br />
 									{user} <br />
