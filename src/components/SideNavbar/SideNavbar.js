@@ -42,7 +42,7 @@ const SideNavbar = (props) => {
 		<div className='sidenav'>
 			<Link to='/myPets'>My Pets</Link>
 			<Link to='/dailyReport'>Daily Report</Link>
-			<Link to='#'>About</Link>
+
 			<button
 				style={{
 					width: "40px",

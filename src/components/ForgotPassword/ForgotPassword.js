@@ -69,7 +69,7 @@ function ForgotPassword() {
 	});
 	return (
 		<div className='loginBody'>
-			<div className='appNameLogin'>Pet Feeder</div>
+			<div className='appNameLogin'>Pets Feeder</div>
 			<div className='FPBox'>
 				<div className='changePswdName'>Change Password</div>
 				<Formik

@@ -67,7 +67,7 @@ const Register = () => {
 
 	return (
 		<div className='loginBody'>
-			<div className='appNameLogin'>Pet Feeder</div>
+			<div className='appNameLogin'>Pets Feeder</div>
 			<div className='registerBox'>
 				<div className='loginTitle'>Registration</div>
 				<Formik

@@ -99,7 +99,7 @@ const Navbar = (props) => {
 						</p>
 						<Link to='/myPets'>My pets </Link>
 						<Link to='/dailyReport'>Daily Report</Link>
-						<Link to='#'>About </Link>
+
 						<button
 							style={{
 								width: "40px",

@@ -81,7 +81,7 @@ function Login() {
 
 	return (
 		<div className='loginBody'>
-			<div className='appNameLogin'>Pet Feeder</div>
+			<div className='appNameLogin'>Pets Feeder</div>
 			<div className='loginBox'>
 				<div className='loginTitle'>Login</div>
 				<Formik
