@@ -23,8 +23,8 @@ const AddLoginSchema = Yup.object().shape({
 });
 
 function Login() {
-	const [user, setUser] = useState("");
-	const [pet, setPet] = useState("");
+	const [user, setUser] = useState(null);
+	const [pet, setPet] = useState(null);
 	const { isLogged, setIsLogged } = useContext(LoggedContext);
 	const [error, setError] = useState("");
 	const history = useHistory();
@@ -71,13 +71,20 @@ function Login() {
 					key
 			);
 
-			setPet(result.data.pet);
-			setUser(result.data.user);
-			console.log("pet " + result.data.user);
+			if (result.data.user == undefined) {
+				setUser(null);
+			} else {
+				setUser(result.data.user);
+			}
+			if (result.data.pet == undefined) {
+				setPet(null);
+			} else {
+				setPet(result.data.pet);
+			}
 		};
 		fetchData();
 	}, []);
-
+	console.log(user);
 	return (
 		<div className='loginBody'>
 			<div className='appNameLogin'>Pets Feeder</div>
@@ -183,7 +190,7 @@ function Login() {
 								</div>
 							</div>
 
-							{user == undefined ? null : (
+							{user == null ? null : (
 								<div className='scheduleInfo'>
 									The active schedule is on the account: {user} <br />
 									The active schedule is for the pet: {pet}
