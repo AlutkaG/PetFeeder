@@ -73,8 +73,7 @@ function Login() {
 
 			setPet(result.data.pet);
 			setUser(result.data.user);
-
-			console.log(result.data.pet);
+			console.log("pet " + result.data.user);
 		};
 		fetchData();
 	}, []);
